@@ -1,0 +1,78 @@
+/* Style for the form */
+form {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f4f7f6;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+  border-color: #5d9cec;
+  outline: none;
+}
+
+form button[type="submit"] {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #5d9cec;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #4a8bd6;
+}
+
+/* Style for the router link buttons */
+button[type="button"] {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  background-color: #5d9cec;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+button[type="button"]:hover {
+  background-color: #4a8bd6;
+}
+
+button[type="button"]:not(:last-child) {
+  margin-bottom: 0.5rem;
+}

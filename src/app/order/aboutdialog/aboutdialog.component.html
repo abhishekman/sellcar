@@ -1,0 +1,43 @@
+<h1 mat-dialog-title>Dialog Title</h1>
+<div mat-dialog-content>
+  <form [formGroup]="form">
+    
+    <mat-form-field>
+      <input matInput formControlName="make" placeholder="Make">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="model" placeholder="Model">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="year" placeholder="Year">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="color" placeholder="Color">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="fuel" placeholder="Fuel">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="transmission" placeholder="Transmission">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="mileage" placeholder="Mileage">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="price" placeholder="Price">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="availability" placeholder="Availability">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="createdAt" placeholder="Created At">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="updatedAt" placeholder="Updated At">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="closeDialog()">Cancel</button>
+  <button mat-button [disabled]="form.invalid" (click)="submitForm()">Submit</button>
+</div>

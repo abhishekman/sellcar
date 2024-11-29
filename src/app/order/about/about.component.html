@@ -1,0 +1,98 @@
+<p>about works!</p>
+<!-- Include jQuery -->
+
+<div class="container">
+    <div class="row">
+        <div>
+            <img src="https://images.pexels.com/photos/712618/pexels-photo-712618.jpeg" alt="Ist Image">
+        </div>
+        <div>
+            <img src="https://images.pexels.com/photos/544542/pexels-photo-544542.jpeg" alt="Second Image">
+        </div>
+    </div>
+</div>
+
+<!-- table data -->
+<table class="table table-dark" >
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Make</th>
+            <th scope="col">Model</th>
+            <th scope="col">Year</th>
+            <th scope="col">Color</th>
+            <th scope="col">Fuel</th>
+            <th scope="col">Transmission</th>
+            <th scope="col">Mileage</th>
+            <th scope="col">Price</th>
+            <th scope="col">Availability</th>
+            <th scope="col">Created At</th>
+            <th scope="col">Updated At</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let car of cars">
+            <td>{{ car.id }}</td>
+            <td>{{ car.make }}</td>
+            <td>{{ car.model }}</td>
+            <td>{{ car.year }}</td>
+            <td>{{ car.color }}</td>
+            <td>{{ car.fuel }}</td>
+            <td>{{ car.transmission }}</td>
+            <td>{{ car.mileage }}</td>
+            <td>{{ car.price }}</td>
+            <td>{{ car.availability }}</td>
+            <td>{{ car.createdAt }}</td>
+            <td>{{ car.updatedAt }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" (click)="openModal()">
+    <i class="fas fa-plus"></i> Dissable
+</button>
+
+<!-- Modal -->
+<div class="modal fade" #exampleModal tabindex="-1" role="dialog" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    <i class="fas fa-plus-circle"></i> Add Item
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="form">
+                    <div class="form-group">
+                        <label for="itemName">
+                            <i class="fas fa-tag"></i> Item Name
+                        </label>
+                        <input type="text" class="form-control" id="itemName" formControlName="itemName">
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">
+                            <i class="fas fa-shopping-cart"></i> Quantity
+                        </label>
+                        <input type="number" class="form-control" id="quantity" formControlName="quantity">
+                    </div>
+                    <!-- Add other form fields here -->
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    <i class="fas fa-times"></i> Close
+                </button>
+                <button type="button" class="btn btn-primary" (click)="saveItem()">
+                    <i class="fas fa-save"></i> Save
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- POP up form -->
+<button mat-button class="btn btn-primary" (click)="openDialog()">Add</button>

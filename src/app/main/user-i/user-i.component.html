@@ -1,0 +1,118 @@
+<app-user-sidebar></app-user-sidebar>
+<br>
+<div class="main-content">
+  <h1>Welcome to SONIC-SPRINT</h1>
+  <div class="car-list">
+    <!-- Car 1 -->
+    <!-- Car 1 -->
+<div class="card" *ngIf="cars.length > 0 && cars[0]">
+  <img src="https://img.freepik.com/premium-photo/mediumtolarge-pure-electric-sedan-with-large-amount-white-chrome-decoration-rear-which-looks-very-luxurious-it-has-hightech-independent-headlights_148840-79837.jpg" alt="Car Image">
+  <h3>{{ cars[0].name }}</h3>
+  <p>Model: {{ cars[0].model }}</p>
+    <!-- Use car.id instead of cars[0].CarID -->
+  <p>Color: {{ cars[0].color }}</p>
+  <p>Price: {{ cars[0].price | currency }}</p>
+  <button (click)="buyCar(cars[0], 'https://img.freepik.com/premium-photo/mediumtolarge-pure-electric-sedan-with-large-amount-white-chrome-decoration-rear-which-looks-very-luxurious-it-has-hightech-independent-headlights_148840-79837.jpg')">Buy</button>
+  <button (click)="sellCar(cars[0])">Sell</button>
+</div>
+
+
+    <!-- Car 2 -->
+    <div class="card" *ngIf="cars.length > 1 && cars[1]">
+      <img src="https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/156405/xuv-3xo-exterior-front-view-39.jpeg" alt="Car Image">
+      <h3>{{ cars[1].name }}</h3>
+      <p>Model: {{ cars[1].model }}</p>
+      
+      <p>Color: {{ cars[1].color }}</p>
+      <p>Price: {{ cars[1].price | currency }}</p>
+      <button (click)="buyCar(cars[1], 'https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/156405/xuv-3xo-exterior-front-view-39.jpeg')">Buy</button>
+      <button (click)="sellCar(cars[1])">Sell</button>
+    </div>
+
+    <!-- Car 3 -->
+    <div class="card" *ngIf="cars.length > 2 && cars[2]">
+      <img src="https://imgd-ct.aeplcdn.com/370x208/n/cw/ec/103611/exterior-right-front-three-quarter-2.jpeg" alt="Car Image">
+      <h3>{{ cars[2].name }}</h3>
+      <p>Model: {{ cars[2].model }}</p>
+     
+      <p>Color: {{ cars[2].color }}</p>
+      <p>Price: {{ cars[2].price | currency }}</p>
+      <button (click)="buyCar(cars[2], 'https://imgd-ct.aeplcdn.com/370x208/n/cw/ec/103611/exterior-right-front-three-quarter-2.jpeg')">Buy</button>
+      <button (click)="sellCar(cars[2])">Sell</button>
+    </div>
+
+    <!-- Car 4 -->
+    <div class="card" *ngIf="cars.length > 3 && cars[3]">
+      <img src="https://imgd-ct.aeplcdn.com/370x208/n/cw/ec/174975/wrangler-facelift-exterior-right-front-three-quarter.jpeg" alt="Car Image">
+      <h3>{{ cars[3].name }}</h3>
+      <p>Model: {{ cars[3].model }}</p>
+    
+      <p>Color: {{ cars[3].color }}</p>
+      <p>Price: {{ cars[3].price | currency }}</p>
+      <button (click)="buyCar(cars[3], 'https://imgd-ct.aeplcdn.com/370x208/n/cw/ec/174975/wrangler-facelift-exterior-right-front-three-quarter.jpeg')">Buy</button>
+      <button (click)="sellCar(cars[3])">Sell</button>
+    </div>
+
+    <!-- Car 5 -->
+    <div class="card" *ngIf="cars.length > 4 && cars[4]">
+      <img src="https://imgd-ct.aeplcdn.com/370x208/n/cw/ec/174975/wrangler-facelift-exterior-right-front-three-quarter.jpeg" alt="Car Image">
+      <h3>{{ cars[4].name }}</h3>
+      <p>Model: {{ cars[4].model }}</p>
+    
+      <p>Color: {{ cars[4].color }}</p>
+      <p>Price: {{ cars[4].price | currency }}</p>
+      <button (click)="buyCar(cars[4], 'https://imgd-ct.aeplcdn.com/370x208/n/cw/ec/174975/wrangler-facelift-exterior-right-front-three-quarter.jpeg')">Buy</button>
+      <button (click)="sellCar(cars[4])">Sell</button>
+    </div>
+
+    <!-- Car 6 -->
+    <div class="card" *ngIf="cars.length > 5 && cars[5]">
+      <img src="https://imgd-ct.aeplcdn.com/370x208/n/cw/ec/45299/jimny-exterior-right-front-three-quarter-27.jpeg" alt="Car Image">
+      <h3>{{ cars[5].name }}</h3>
+      <p>Model: {{ cars[5].model }}</p>
+     
+      <p>Color: {{ cars[5].color }}</p>
+      <p>Price: {{ cars[5].price | currency }}</p>
+      <button (click)="buyCar(cars[5], 'https://imgd-ct.aeplcdn.com/370x208/n/cw/ec/45299/jimny-exterior-right-front-three-quarter-27.jpeg')">Buy</button>
+      <button (click)="sellCar(cars[5])">Sell</button>
+    </div>
+
+    <!-- Car 7 -->
+    <div class="card" *ngIf="cars.length > 6 && cars[6]">
+      <img src="https://imgd-ct.aeplcdn.com/370x208/n/cw/ec/40432/scorpio-n-exterior-right-front-three-quarter-75.jpeg" alt="Car Image">
+      <h3>{{ cars[6].name }}</h3>
+      <p>Model: {{ cars[6].model }}</p>
+     
+      <p>Color: {{ cars[6].color }}</p>
+      <p>Price: {{ cars[6].price | currency }}</p>
+      <button (click)="buyCar(cars[6], 'https://imgd-ct.aeplcdn.com/370x208/n/cw/ec/40432/scorpio-n-exterior-right-front-three-quarter-75.jpeg')">Buy</button>
+      <button (click)="sellCar(cars[6])">Sell</button>
+    </div>
+
+    <!-- Car 8 -->
+    <div class="card" *ngIf="cars.length > 7 && cars[7]">
+      <img src="https://imgd-ct.aeplcdn.com/370x208/n/cw/ec/141857/kiger-exterior-right-front-three-quarter-6.jpeg" alt="Car Image">
+      <h3>{{ cars[7].name }}</h3>
+      <p>Model: {{ cars[7].model }}</p>
+      
+      <p>Color: {{ cars[7].color }}</p>
+      <p>Price: {{ cars[7].price | currency }}</p>
+      <button (click)="buyCar(cars[7], 'https://imgd-ct.aeplcdn.com/370x208/n/cw/ec/141857/kiger-exterior-right-front-three-quarter-6.jpeg')">Buy</button>
+      <button (click)="sellCar(cars[7])">Sell</button>
+    </div>
+
+    <!-- Car 9 -->
+    <div class="card" *ngIf="cars.length > 8 && cars[8]">
+      <img src="https://imgd-ct.aeplcdn.com/370x208/n/cw/ec/137875/i7-exterior-right-front-three-quarter-8.jpeg" alt="Car Image">
+      <h3>{{ cars[8].name }}</h3>
+      <p>Model: {{ cars[8].model }}</p>
+      
+      <p>Color: {{ cars[8].color }}</p>
+      <p>Price: {{ cars[8].price | currency }}</p>
+      <button (click)="buyCar(cars[8], 'https://imgd-ct.aeplcdn.com/370x208/n/cw/ec/141857/kiger-exterior-right-front-three-quarter-6.jpeg')">Buy</button>
+      <button (click)="sellCar(cars[8])">Sell</button>
+    </div>
+  </div>
+  </div>
+
+<app-user-footer></app-user-footer>

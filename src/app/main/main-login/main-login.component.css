@@ -1,0 +1,165 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style the sidebar */
+.sidebar {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 16px;
+  transition: width 0.3s;
+}
+
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+  transition: color 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Style the main content */
+.main {
+  margin-top: 10;
+  margin-left: 200px;
+  padding: 20px;
+  transition: margin-left 0.3s;
+   
+}
+
+/* Style the card */
+.card {
+  margin-top: 0%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+/* Style the header */
+h1 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Style the paragraph */
+p {
+  color: black;
+  font-size: 16px;
+}
+
+/* Custom styles for charts */
+.linechart {
+  margin: 200px 100px 0 300px; /* Combined margins for clarity */
+  height: 300px;
+  width: 80%;
+}
+
+.piechart {
+  margin: 30px auto;
+  width: 80%;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100px;
+  }
+
+  .sidebar a {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .main {
+    margin-left: 100px;
+  }
+
+  .card {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .linechart, .piechart {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sidebar {
+    width: 60px;
+  }
+
+  .sidebar a {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .main {
+    margin-left: 60px;
+  }
+
+  .card {
+    margin: 5px;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .linechart, .piechart {
+    width: 100%;
+    margin: 10px auto;
+  }
+}

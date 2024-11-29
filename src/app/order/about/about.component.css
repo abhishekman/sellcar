@@ -1,0 +1,59 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+/* table{
+  display: none;
+} */
+
+
+
+/* Add this CSS to your component's CSS file or global styles */
+
+/* Style for the modal content */
+.modal-content {
+    background-color: #007bff; /* Set background color to blue */
+    border-radius: 10px; /* Add border radius for rounded corners */
+    
+  }
+  
+  /* Style for the modal header */
+  .modal-header {
+    border-bottom: none; /* Remove bottom border to separate header from body */
+  }
+  
+  /* Style for the modal title */
+  .modal-title {
+    color: #ffffff; /* Set title color to white */
+  }
+  
+  /* Style for the form labels */
+  .form-group label {
+    color: #ffffff; /* Set label color to white */
+  }
+  
+  /* Style for the form inputs */
+  .form-control {
+    border: 1px solid #ffffff; /* Add border for inputs */
+  }
+  
+  /* Style for the Close button */
+  .close {
+    color: #ffffff; /* Set Close button color to white */
+  }
+  
+  /* Style for the Save button */
+  .btn-primary {
+    background-color: #ffffff; /* Set Save button background color to white */
+    color: #007bff; /* Set Save button text color to blue */
+    border-color: #ffffff; /* Set Save button border color to white */
+  }
+  
+  .btn-primary:hover {
+    background-color: #f0f0f0; /* Set Save button background color on hover */
+    border-color: #f0f0f0; /* Set Save button border color on hover */
+  }
+  
+
+
+ 

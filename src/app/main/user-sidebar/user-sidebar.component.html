@@ -1,0 +1,22 @@
+<nav class="navbar">
+  <div class="logo">
+    <a routerLink="/">CarZone</a>
+  </div>
+  <ul class="nav-links">
+    <li><a routerLink="/main/user-i">Home</a></li>
+    <li><a routerLink="/order/ui-upload-image">Profile</a></li>
+    <li><a routerLink="/main/user-chat">Chat</a></li>
+    <li><a routerLink="/main/car-mir">Maintenance</a></li>
+    <li><a routerLink="/main/user-seller">Sell</a></li>
+    <li><a routerLink="/sell">Rental Car</a></li>
+    <li><a routerLink="/order/login">Logout</a></li>
+  </ul>
+  <div class="cart-icon">
+    <a routerLink="/main/user-profile">
+      <img src="\assets\cart.png" alt="cart.png">
+      <span class="cart-count" *ngIf="cartCount > 0">{{ cartCount }}</span>
+    </a>
+  </div>
+  
+  
+</nav>

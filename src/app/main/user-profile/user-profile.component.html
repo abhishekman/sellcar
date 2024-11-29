@@ -1,0 +1,40 @@
+<app-user-sidebar></app-user-sidebar>
+<div class="main-content">
+  <h1>Your Car Orders</h1>
+  <div *ngIf="carDetails.length > 0; else noCars">
+    <div *ngFor="let detail of carDetails" class="card">
+      <img [src]="detail.imageUrl" alt="Car Image">
+      <h3>{{ detail.car.name }}</h3>
+      <table>
+        <tr>
+          <td>Model:</td>
+          <td>{{ detail.car.model }}</td>
+        </tr>
+        <tr>
+          <td>Color:</td>
+          <td>{{ detail.car.color }}</td>
+        </tr>
+        <tr>
+          <td>Price:</td>
+          <td>{{ detail.car.price | currency }}</td>
+        </tr>
+      </table>
+      <button class="pay-now-button" (click)="payNow(detail)" [disabled]="!isAddressProvided">Pay Now</button>
+      <button class="address-button" (click)="openAddressDialog()">Address</button>
+      
+    </div>
+  </div>
+  <ng-template #noCars>
+    <p>No cars selected.</p>
+  </ng-template>
+
+  <div class="total-price">
+    <label>Total Price: </label>
+    <input type="text" [value]="calculateTotalPrice() | currency" readonly>
+    <button (click)="payTotalPrice()" class="pay-total-button" [disabled]="!isAddressProvided">Pay Total Price</button>
+    <button (click)="openAddressDialog()" class="address-button">Address</button>
+  </div>
+
+  <button (click)="clearCars()">Clear Selections</button>
+</div>
+<app-user-footer></app-user-footer>

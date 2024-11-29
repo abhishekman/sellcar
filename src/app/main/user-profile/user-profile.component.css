@@ -1,0 +1,146 @@
+/* user-profile.component.css */
+
+.main-content {
+  margin: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  max-width: 300px; /* Ensure images don't exceed a reasonable size */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+table tr {
+  border-bottom: 1px solid #ddd;
+}
+
+table td {
+  padding: 8px;
+}
+
+.pay-now-button,
+.address-button,
+.pay-total-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pay-now-button:hover,
+.address-button:hover,
+.pay-total-button:hover {
+  background-color: #45a049;
+}
+
+.pay-now-button.glow,
+.address-button.glow,
+.pay-total-button.glow {
+  animation: glowing 1500ms infinite;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 10px #4CAF50;
+  }
+  50% {
+    box-shadow: 0 0 20px #4CAF50;
+  }
+  100% {
+    box-shadow: 0 0 10px #4CAF50;
+  }
+}
+
+.total-price {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.total-price label {
+  font-weight: bold;
+}
+
+.total-price input {
+  width: 120px;
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    padding: 15px;
+  }
+  
+  .card img {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .main-content {
+    padding: 10px;
+  }
+  
+  .card {
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 20px;
+  }
+  
+  table td {
+    font-size: 14px;
+  }
+  
+  .total-price input {
+    width: 100px;
+    font-size: 14px;
+  }
+}

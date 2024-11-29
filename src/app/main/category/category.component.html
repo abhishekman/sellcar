@@ -1,0 +1,146 @@
+<div>
+    <div>
+        <h2>Car list
+        </h2>
+        <div class="search">
+            <input type="text" id="inp" placeholder="Search text..." [(ngModel)]="searchId">
+            <button type="button" id="btns" (click)="onSearch()">Search</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>CarID</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Year</th>
+                    <th>Color</th>
+                    <th>EngineType</th>
+                    <th>TransmissionType</th>
+                    <th>Mileage</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let car of cars">
+                    <td>{{ car.CarID }}</td>
+                    <td>{{ car.Make }}</td>
+                    <td>{{ car.Model }}</td>
+                    <td>{{ car.Year }}</td>
+                    <td>{{ car.Color }}</td>
+                    <td>{{ car.EngineType }}</td>
+                    <td>{{ car.TransmissionType }}</td>
+                    <td>{{ car.Mileage }}</td>
+                    <td><button routerLink="/admin/employeedata/update/{{ car.CarID }}"><i class="bi bi-pencil-square"></i> edit</button></td>
+                    <td><button (click)="deleteEmployee(car.CarID)"><i class="bi bi-trash3"></i>Delete</button></td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<!-- Loading Overlay -->
+<div class="loading-overlay" *ngIf="isLoading">
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div>Please wait...</div>
+</div>
+
+
+<!-- Pagination -->
+<div class="pagination">
+    <button (click)="prevPage()" [disabled]="pageIndex === 1">Previous</button>
+    <span>{{ pageIndex }}</span>
+    <button (click)="nextPage()">Next</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container-heading">
+    <h1>Car List</h1>
+</div> -->
+
+<!-- ++++++++++ Add & Search +++++++++++++ -->
+<!-- <div class="add_search">
+    <div class="Std_add">
+        <button class="btn_add" routerLink="/admin/student/add">
+            <i class="bi bi-plus-lg"></i>
+        </button>
+    </div>
+
+    <div class="search">
+        <input type="text" class="form-control" placeholder="Search here....." [(ngModel)]="searchId">
+        <i class="bi bi-search"></i>
+        <button class="btn_search" (click)="searchCar()">Search</button>
+    </div>
+</div> -->
+<!-- ++++++++++++++++++++++++++++ -->
+
+<!-- <div class="table-container">
+    <div class="table-heading">
+        <div class="table-cell-heading">CarID</div>
+        <div class="table-cell-heading">Make</div>
+        <div class="table-cell-heading">Model</div>
+        <div class="table-cell-heading">Year</div>
+        <div class="table-cell-heading">Color</div>
+        <div class="table-cell-heading">EngineType</div>
+        <div class="table-cell-heading">TransmissionType</div>
+        <div class="table-cell-heading">Mileage</div>
+    </div>
+
+    <div class="table-row" *ngFor="let item of cars">
+        <div class="table-cell">{{ item.CarID }}</div>
+        <div class="table-cell">{{ item.Make }}</div>
+        <div class="table-cell">{{ item.Model }}</div>
+        <div class="table-cell">{{ item.Year }}</div>
+        <div class="table-cell">{{ item.Color }}</div>
+        <div class="table-cell">{{ item.EngineType }}</div>
+        <div class="table-cell">{{ item.TransmissionType }}</div>
+        <div class="table-cell">{{ item.Mileage }}</div>
+
+        <div class="table-cell-button">
+            <button class="btn1" [routerLink]="['/admin/student/update', item.CarID]">
+                <i class="bi bi-pencil-fill"></i>
+            </button>
+
+            <button class="btn2" (click)="deleteCar(item.CarID)">
+                <i class="bi bi-trash3"></i>
+            </button>
+        </div>
+    </div>
+</div> -->
+
+<!-- +++++++++++++ Loading Overlay ++++++++++++++++ -->
+<!-- <div class="loading-overlay" *ngIf="isLoading">
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div>Please wait...</div>
+</div> -->
+
+<!-- +++++++++++ Paging Concept +++++++++++++++ -->
+<!-- <div class="pagination">
+    <div class="pagination_button">
+        <button (click)="prevPage()" [disabled]="pageIndex === 1"><i class="bi bi-chevron-left"></i></button>
+        <span>{{ pageIndex }}</span>
+        <button (click)="nextPage()"><i class="bi bi-chevron-right"></i></button>
+    </div>
+</div> -->

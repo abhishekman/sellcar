@@ -1,0 +1,16 @@
+<!-- main-register.component.html -->
+<form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+  <div>
+    <h3>Admin Sign-Up</h3>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" [(ngModel)]="userData.username" required>
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" [(ngModel)]="userData.password" required>
+  </div>
+  <button type="submit">Register</button>
+</form>
+<button type="button" [routerLink]="['/main/admin-login']">Admin Sign-In</button>
+ <button type="button" [routerLink]="['/order/home']">Home</button>
+<button type="button" [routerLink]="['/order/login']">User</button>

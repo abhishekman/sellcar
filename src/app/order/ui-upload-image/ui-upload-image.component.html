@@ -1,0 +1,9 @@
+<div>
+    <h2>Upload Profile Picture</h2>
+    <div class="profile-container">
+      <img [src]="profileImageSrc" class="profile-img" alt="Profile Picture">
+    </div>
+    <input type="file" (change)="onFileSelected($event)">
+    <button (click)="onUpload()">Upload Profile Picture</button>
+  </div>
+  

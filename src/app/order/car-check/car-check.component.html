@@ -1,0 +1,17 @@
+<div class="dialog-container">
+  <h2 mat-dialog-title class="dialog-title">{{ data.model }}</h2>
+  <mat-dialog-content class="dialog-content">
+    <img src="{{ data.image }}" alt="Car Image">
+    <p>Model: {{ data.model }}</p>
+    <p>Color: {{ data.color }}</p>
+    <p>Price: {{ data.price | currency }}</p>
+    <p>Year: {{ data.Year }}</p>
+    <p>Engine Type: {{ data.EngineType }}</p>
+    <p>Transmission Type: {{ data.TransmissionType }}</p>
+    <p>Mileage: {{ data.Mileage }}</p>
+  </mat-dialog-content>
+  <mat-dialog-actions class="dialog-actions">
+    <button mat-button mat-dialog-close>Close</button>
+    <button mat-button (click)="buyNow()">Buy Now</button>
+  </mat-dialog-actions>
+</div>

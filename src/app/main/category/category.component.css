@@ -1,0 +1,71 @@
+/* Styles for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Styles for buttons */
+button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for loading overlay */
+.loading-overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spinner-border {
+    margin-bottom: 10px;
+}
+
+/* Styles for pagination */
+.pagination {
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 8px 12px;
+    margin: 0 5px;
+    border: 1px solid #007bff;
+    background-color: #fff;
+    color: #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination button:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.pagination button:disabled {
+    cursor: not-allowed;
+    color: #999;
+    background-color: #f2f2f2;
+}

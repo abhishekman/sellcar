@@ -1,0 +1,47 @@
+<!-- home.component.html -->
+
+<!-- The sidebar -->
+<div class="sidebar" style="position: fixed;">
+  <a routerLink="/order/home"><i class="fa fa-fw fa-home"></i> Home</a>
+  <a routerLink="/main/category"><i class="fa fa-fw fa-wrench"></i> Car List</a>
+  <a href="#clients"><i class="fa fa-fw fa-user"></i> Clients</a>
+  <a routerLink="/main/chat"><i class="fa fa-fw fa-envelope"></i> Chat</a>
+  <a routerLink="/order/login"><i class="fa fa-fw fa-envelope"></i> Logout</a>
+</div>
+
+<!-- Main content -->
+<div class="main">
+  <div class="card">
+    <h1>ADMIN PAGE</h1>
+    <p><mark>{{ currentDate | date: 'mediumDate' }}</mark> {{ currentDate | date: 'HH:mm:ss' }}</p>
+  </div>
+</div>
+
+
+
+<!-- fusion chart -->
+
+<!-- <p>home works!</p> -->
+
+<div class="graph_count">
+  <div *ngIf="errorMessage">
+    <p>{{ errorMessage }}</p>
+  </div>
+  
+  <div *ngIf="!errorMessage" class="graph_count1">
+    
+    <div class="graph_count2">
+    <div class="linechart">
+      <canvas #lineChartCanvas ></canvas>
+    </div>
+  
+    <!-- <div class="historicalchart">
+      <canvas #historicalChartCanvas></canvas>
+    </div>
+  </div>
+  
+    <div class="piechart">
+      <canvas #pieChartCanvas></canvas>
+    </div> -->
+  
+   

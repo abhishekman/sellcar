@@ -1,0 +1,100 @@
+/* Global styles for the page layout */
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #f0f0f0; /* Light gray background */
+}
+
+.main-content {
+  max-width: 1200px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.car-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Styling for individual cards */
+.card {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  background-color: #fff;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px; /* Adjust as needed */
+  object-fit: cover;
+  border-bottom: 1px solid #ddd; /* Create a border below the image */
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #333;
+  text-align: center;
+}
+
+.card p {
+  margin: 5px 0;
+  color: #666;
+  text-align: center;
+}
+
+.card button {
+  display: block;
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .car-list {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card img {
+    height: 160px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card img {
+    height: 140px;
+  }
+}

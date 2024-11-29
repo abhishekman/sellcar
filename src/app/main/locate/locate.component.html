@@ -1,0 +1,13 @@
+
+<div class="form-container">
+    <form (ngSubmit)="onSubmit()">
+      <label for="country">Country:</label>
+      <input type="text" id="country" [(ngModel)]="country" name="country" placeholder="Enter country" required>
+  
+      <label for="state">State:</label>
+      <input type="text" id="state" [(ngModel)]="state" name="state" placeholder="Enter state" required>
+  
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  

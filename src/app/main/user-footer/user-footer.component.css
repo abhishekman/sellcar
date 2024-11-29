@@ -1,0 +1,91 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: url('https://img.freepik.com/free-vector/lightened-luxury-sedan-car-against-night-city-with-headlamps-rear-tail-lights-lit_1284-28804.jpg') no-repeat center center/cover; /* Use background image */
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  .footer-section.social {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer-section.social h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section.social a {
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 50%; /* Make images rounded */
+    overflow: hidden; /* Ensure rounded corners are applied */
+  }
+  
+  .footer-section.social img {
+    width: 40px; /* Set a consistent size for the icons */
+    height: 40px;
+    object-fit: cover;
+  }
+  
+  .footer-section {
+    max-width: 200px;
+    background: rgba(79, 82, 221, 0.945); /* Semi-transparent black background for text readability */
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .footer-section h2 {
+    margin-bottom: 10px;
+    color: #ffd700; /* Gold color for headings */
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    color: #ffd700; /* Gold color for links */
+    text-decoration: none;
+  }
+  
+  .footer-section ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-section p {
+    margin: 5px 0;
+    color: #fff; /* White color for text */
+  }
+  
+  .footer-section .social a {
+    margin-right: 10px;
+  }
+  
+  .footer-section .social img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(79, 82, 221, 0.945); /* Semi-transparent black background for better readability */
+    color: #ffd700; /* Gold color for bottom text */
+  }

@@ -1,0 +1,191 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-orange">
+  <div class="container-fluid">
+    <h3>SONIC-SPRINT &nbsp;&nbsp;&nbsp;</h3>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- Home -->
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink=" ">Home</a>
+        </li>
+        <!-- Login -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/order/login">Login</a>
+        </li>
+
+         <!-- Locate -->
+         <li class="nav-item">
+          <a class="nav-link" routerLink="/main/locate">Location</a>
+        </li>
+       
+        <!-- Admin -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/main/admin-login">Admin</a>
+        </li>
+        <!-- About -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/main/main-login">About</a>
+        </li>
+        <!-- List of cars -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/main/user-i">List</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Carousel -->
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://img.freepik.com/free-photo/golden-car-with-license-plate_1340-23676.jpg"
+        class="d-block w-100" alt="M35" height="500px">
+    </div>
+    <div class="carousel-item">
+      <img src="https://img.freepik.com/free-photo/view-3d-car_23-2150998589.jpg" class="d-block w-100" alt="M17" height="500px">
+    </div>
+    <div class="carousel-item">
+      <img src="https://img.freepik.com/premium-photo/front-house-there-is-luxury-car_865967-81497.jpg"
+        class="d-block w-100" alt="Hellicopter" height="500px">
+    </div>
+  </div>
+</div>
+
+<!-- Sections for cars -->
+<div class="home">
+  <!-- Featured Cars Section -->
+  <section class="featured-cars">
+    <h2>Featured Cars</h2>
+    <div class="cards-container">
+      <!-- Car 1 -->
+      <div class="card" *ngIf="cars.length > 0 && cars[0]">
+        <img src="https://img.freepik.com/free-photo/photorealistic-view-off-road-vehicle-with-nature-terrain-weather-conditions_23-2151430137.jpg" alt="Car Image">
+        <h3>{{ cars[0].name }}</h3>
+        <p>Model: {{ cars[0].model }}</p>
+        <p>Color: {{ cars[0].color }}</p>
+        <p>Price: {{ cars[0].price | currency }}</p>
+        <button class="checkout-btn" (click)="openDialog(cars[0], 'https://img.freepik.com/free-photo/photorealistic-view-off-road-vehicle-with-nature-terrain-weather-conditions_23-2151430137.jpg')">Check Out</button>
+      </div>
+      <!-- Car 2 -->
+      <div class="card" *ngIf="cars.length > 1 && cars[1]">
+        <img src="https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/156405/xuv-3xo-exterior-front-view-39.jpeg" alt="Car Image">
+        <h3>{{ cars[1].name }}</h3>
+        <p>Model: {{ cars[1].model }}</p>
+        <p>Color: {{ cars[1].color }}</p>
+        <p>Price: {{ cars[1].price | currency }}</p>
+        <button class="checkout-btn" (click)="openDialog(cars[1], 'https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/156405/xuv-3xo-exterior-front-view-39.jpeg')">Check Out</button>
+      </div>
+      <!-- Car 3 -->
+      <div class="card" *ngIf="cars.length > 2 && cars[2]">
+        <img src="https://imgd-ct.aeplcdn.com/370x208/n/cw/ec/103611/exterior-right-front-three-quarter-2.jpeg" alt="Car Image">
+        <h3>{{ cars[2].name }}</h3>
+        <p>Model: {{ cars[2].model }}</p>
+        <p>Color: {{ cars[2].color }}</p>
+        <p>Price: {{ cars[2].price | currency }}</p>
+        <button class="checkout-btn" (click)="openDialog(cars[2], 'https://imgd-ct.aeplcdn.com/370x208/n/cw/ec/103611/exterior-right-front-three-quarter-2.jpeg')">Check Out</button>
+      </div>
+      <!-- Car 4 -->
+      <div class="card" *ngIf="cars.length > 3 && cars[3]">
+        <img src="https://imgd-ct.aeplcdn.com/370x208/n/cw/ec/174975/wrangler-facelift-exterior-right-front-three-quarter.jpeg" alt="Car Image">
+        <h3>{{ cars[3].name }}</h3>
+        <p>Model: {{ cars[3].model }}</p>
+        <p>Color: {{ cars[3].color }}</p>
+        <p>Price: {{ cars[3].price | currency }}</p>
+        <button class="checkout-btn" (click)="openDialog(cars[3], 'https://imgd-ct.aeplcdn.com/370x208/n/cw/ec/174975/wrangler-facelift-exterior-right-front-three-quarter.jpeg')">Check Out</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+    <!-- Why Buy From Us Section -->
+    <section class="why-buy">
+      <h2>Why Buy From Us</h2>
+      <div class="cards-container">
+        <div class="card">
+          <img
+            src="https://img.freepik.com/free-vector/car-insurance-concept-drivers-have-car-accident-calling-insurance-agent-vector-illustration_36358-325.jpg"
+            alt="Supersonik Warranty">
+          <h3>Supersonik Warranty</h3>
+          <p>We offer an extensive warranty that covers all major components of your vehicle, giving you peace of mind.</p>
+        </div>
+        <div class="card">
+          <img
+            src="https://img.freepik.com/free-vector/customers-like-video-with-experts-modern-car-review-with-rating-stars-car-review-video-test-drive-channel-auto-video-advertising-concept_335657-2249.jpg"
+            alt="140 Quality Check">
+          <h3>140 Quality Check</h3>
+          <p>Each car undergoes a rigorous 140-point quality check to ensure it meets our high standards.</p>
+        </div>
+        <div class="card">
+          <img src="https://img.freepik.com/free-vector/car-reselling-concept_1284-7541.jpg" alt="Easy Returns">
+          <h3>Easy Returns</h3>
+          <p>If you're not satisfied with your purchase, our easy return policy allows you to return the car within 7 days.</p>
+        </div>
+        <div class="card">
+          <img src="https://img.freepik.com/free-vector/auto-mechanic-concept-illustration_114360-17860.jpg"
+            alt="Free Servicing">
+          <h3>Free Servicing</h3>
+          <p>Enjoy free servicing for the first year after your purchase, ensuring your car stays in top condition.</p>
+        </div>
+      </div>
+    </section>
+
+  <!-- Success Stories Section -->
+  <section class="success-stories">
+    <h2>Success Stories</h2>
+    <div class="cards-container">
+      <div class="card">
+        <img
+          src="https://img.freepik.com/free-vector/surprise-gives-gift-scene-man-gives-present-car-keys-girl-auto-with-ribbon-bows_575670-119.jpg"
+          alt="Happy Customer 1">
+        <p>"Buying a car from this platform was the best decision I made. The process was smooth and the customer service was excellent. I'm extremely happy with my new car!" - John Doe</p>
+      </div>
+      <div class="card">
+        <img src="https://img.freepik.com/free-photo/happy-couple-car-dealership_23-2148130182.jpg"
+          alt="Happy Customer 2">
+        <p>"I was skeptical at first, but the quality check and warranty convinced me. The car is fantastic, and the after-sales service is top-notch. Highly recommend!" - Jane Smith</p>
+      </div>
+      <div class="card">
+        <img src="https://img.freepik.com/premium-photo/people-car-salesman-car-dealership_62972-9134.jpg"
+          alt="Happy Customer 3">
+        <p>"The easy return policy gave me the confidence to buy my car online. I love my new car and the entire experience was hassle-free. Thank you!" - Mark Johnson</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supersonik Effect Section -->
+  <section class="supersonik-effect">
+    <h2>Supersonik Effect</h2>
+    <div class="cards-container">
+      <div class="card">
+        <h3>Platform Growth</h3>
+        <p>In the last year, our platform has seen a 50% increase in user registrations and a 30% increase in car sales.</p>
+      </div>
+      <div class="card">
+        <h3>Customer Satisfaction</h3>
+        <p>Our customer satisfaction rate has reached 95%, reflecting our commitment to quality and service.</p>
+      </div>
+      <div class="card">
+        <h3>New Partnerships</h3>
+        <p>We've partnered with leading car manufacturers and service providers to offer even better deals and services.</p>
+      </div>
+      <div class="card">
+        <h3>Technological Advancements</h3>
+        <p>Our platform now uses the latest technology to ensure a seamless and secure buying experience for our customers.</p>
+      </div>
+    </div>
+  </section>
+       
+
+<!-- Footer -->
+<footer class="air-force-footer">
+  <div class="footer-content">
+    <!-- <p>&copy; 2024 SUP-SONIC Theme</p> -->
+  </div>
+</footer>
+<app-user-footer></app-user-footer>

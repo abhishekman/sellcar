@@ -1,0 +1,55 @@
+<div class="container">
+  <h2>Update Car Details</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="make">Make</label>
+      <input type="text" id="make" [(ngModel)]="make" name="make" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="model">Model</label>
+      <input type="text" id="model" [(ngModel)]="model" name="model" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="year">Year</label>
+      <select id="year" [(ngModel)]="year" name="year" class="form-control">
+        <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="color">Color</label>
+      <input type="text" id="color" [(ngModel)]="color" name="color" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="engineType">Engine Type</label>
+      <input type="text" id="engineType" [(ngModel)]="engineType" name="engineType" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label>Transmission Type</label>
+      <div>
+        <input type="radio" id="manual" [(ngModel)]="transmission" name="transmission" value="manual" />
+        <label for="manual">Manual</label>
+      </div>
+      <div>
+        <input type="radio" id="automatic" [(ngModel)]="transmission" name="transmission" value="automatic" />
+        <label for="automatic">Automatic</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="mileage">Mileage</label>
+      <input type="number" id="mileage" [(ngModel)]="mileage" name="mileage" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="number" id="price" [(ngModel)]="price" name="price" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="file">Upload Image</label>
+      <input type="file" id="file" (change)="onFileSelected($event)" class="form-control" />
+      <img *ngIf="selectedImage" [src]="selectedImage" class="img-thumbnail" />
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  <div *ngIf="submissionSuccess" class="alert alert-success" role="alert">
+    Car data submitted successfully!
+  </div>
+</div>

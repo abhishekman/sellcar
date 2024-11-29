@@ -1,0 +1,30 @@
+<form [formGroup]="loginForm" (ngSubmit)="handleLogin()">
+    <h1> Admin Login Here</h1>
+  
+    <div class="top-buttons">
+      <button type="button" routerLink="/order/home">Home</button>
+      <button type="button" routerLink="/main/main-register">Registration</button>
+    </div>
+  
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" formControlName="username">
+    </div>
+  
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" formControlName="password">
+    </div>
+  
+    <div class="capcha_form">
+      <ngx-recaptcha2 #captchaElem
+        [siteKey]="siteKey"
+        formControlName="recaptcha">
+      </ngx-recaptcha2>
+    </div>
+  
+    <button type="submit">Login</button>
+
+    
+  </form>
+  

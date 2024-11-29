@@ -1,0 +1,14 @@
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+  }
+  

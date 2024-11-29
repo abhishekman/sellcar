@@ -1,0 +1,27 @@
+<div>
+  <h2>User Address</h2>
+  <div *ngIf="carModelName">
+    <p>Car Model: {{ carModelName }}</p>
+  </div>
+  <form (ngSubmit)="saveAddress()" #userAddressForm="ngForm">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="buyer.name" name="name" required>
+    </div>
+    <div>
+      <label for="contactInfo">Contact Info:</label>
+      <input type="text" id="contactInfo" [(ngModel)]="buyer.contactInfo" name="contactInfo" required>
+    </div>
+    <div>
+      <label for="model">Model:</label>
+      <input type="text" id="model" [(ngModel)]="buyer.model" name="model" required>
+    </div>
+    <div>
+      <label for="address">Address:</label>
+      <input type="text" id="address" [(ngModel)]="buyer.address" name="address" required>
+    </div>
+    <button type="submit" [disabled]="!userAddressForm.form.valid">Save Address</button>
+  </form>
+  <button (click)="buyNow()">Buy Now</button>
+  <button (click)="closeDialog()">Close</button>
+</div>
